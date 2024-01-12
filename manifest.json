@@ -1,21 +1,19 @@
 {
-    "content_scripts": [
-        {
-            "matches": ["https://www.pivotaltracker.com/*"],
-            "js": ["git-button.js"]
-        }
-    ],
-    "name": "Git Button for Pivotal Tracker",
-    "description": "Add a copy button to pivotal for creating new git branches using the current story id.",
-    "homepage_url": "http://git-button.joeldare.com",
-    "icons": {
-        "16": "icon-16.png",
-        "48": "icon-48.png",
-        "128": "icon-128.png" 
-    },
-    "permissions": [
-        "https://www.pivotaltracker.com/*"
-    ],
-    "version": "17.1.13",
-    "manifest_version": 2
+  "content_scripts": [
+    {
+      "matches": ["https://www.pivotaltracker.com/*"],
+      "js": ["git-button.js"],
+      "css": ["git-button.css"]
+    }
+  ],
+  "name": "Git branch name generator for Pivotal Tracker",
+  "description": "Add a copy button to pivotal stories to generate a branch name based on id and slugified name.",
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "permissions": ["https://www.pivotaltracker.com/*"],
+  "version": "1.0.0",
+  "manifest_version": 2
 }
