@@ -1,16 +1,16 @@
 # Git Button for Pivotal
 
-*Git Button* adds a new copy button to each story in Pivotal Tracker. It copies the following code to the clipboard so that it can be pasted into a terminal.
+_Git Button_ adds a new copy button to each story in Pivotal Tracker. It copies the following code to the clipboard so that it can be pasted.
 
 ```
-git checkout -b 1234567
+185723723-a-slugified-branch-name-from-card-title
 ```
 
 ![Screenshot of Git Button in Pivotal](http://git-button.joeldare.com/screenshot-640x400.png)
 
 ## Installation
 
-To use the extension free, follow the instructions under *Source Code* below. If you find the extension useful and would like to support the author, please buy the [Git Button extension](https://chrome.google.com/webstore/detail/git-button/nilhelbfenibcdiafbmlpbomelmdegli) from the Chrome Web Store.
+To use the extension free, follow the instructions under _Source Code_ below. If you find the extension useful and would like to support the author, please buy the [Git Button extension](https://chrome.google.com/webstore/detail/git-button/nilhelbfenibcdiafbmlpbomelmdegli) from the Chrome Web Store.
 
 ## Source Code
 
@@ -28,8 +28,4 @@ This software is open source, distributed under the MIT license.
 
 ## Author
 
-*Git Button* was created by [Joel Dare](mailto:joel@joeldare.com).
-
-## To-Do
-
-- Fix the hover over styling
+This extension was forked from the _Git Button_ repo created by [Joel Dare](mailto:joel@joeldare.com).
