@@ -12,7 +12,19 @@
     "48": "icon-48.png",
     "128": "icon-128.png"
   },
-  "permissions": ["https://www.pivotaltracker.com/*"],
+  "host_permissions": [
+    "https://pivotaltracker.com/*",
+    "https://www.pivotaltracker.com/*"
+  ],
   "version": "1.0.0",
-  "manifest_version": 3
+  "manifest_version": 3,
+  "web_accessible_resources": [
+    {
+      "resources": ["logo.svg"],
+      "matches": [
+        "https://www.pivotaltracker.com/*",
+        "https://pivotaltracker.com/*"
+      ]
+    }
+  ]
 }

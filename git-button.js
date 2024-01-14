@@ -1,20 +1,20 @@
 
 function addGitButton() {
     // Grab all action div's
-    var editActions = document.querySelectorAll("div.actions");
+    const editActions = document.querySelectorAll("div.actions");
     // If there were some action divs
     if (editActions.length > 0) {
         // Loop through the action divs
         editActions.forEach(function (singleAction) {
             // Create button if the button hasn't been added yet
             if (!singleAction.childNodes[0].className.includes('alloy_git_button')) {
-                var storyIdInput = singleAction.querySelector("input.text_value");
-                var storyId = storyIdInput.value.substr(1);
+                const storyIdInput = singleAction.querySelector("input.text_value");
+                const storyId = storyIdInput.value.substr(1);
                 const storyContainer = singleAction.closest(`.story_${storyId}`);
                 const storyType = getStoryType(storyContainer);
                 const name = storyContainer.querySelector('textarea[data-aid="name"]').value;
                 const button = generateGitButton(storyType, storyId, name);
-                var firstNode = singleAction.childNodes[0];
+                const firstNode = singleAction.childNodes[0];
                 // Insert the button before the first node
                 singleAction.insertBefore(button, firstNode);
             }
@@ -43,16 +43,16 @@ function generateBranchname(storyType, storyId, storyName) {
 }
 
 function generateGitButton(storyType, storyId, storyName) {
-    var button = document.createElement("button");
-    button.style.backgroundImage = `url(//assets.pivotaltracker.com/next/assets/next/e9e6998e-git-branch.svg)`;
-    button.style.backgroundSize = "14px 14px";
-    button.style.backgroundPosition = "center";
-    button.style.backgroundRepeat = "no-repeat";
+    const button = document.createElement("button");
     button.classList.add("alloy_git_button");
     button.type = "button";
     button.className = "autosaves clipboard_button hoverable capped alloy_git_button";
     button.title = "Copy Git branch command to your clipboard";
     button.setAttribute("data-clipboard-text", generateBranchname(storyType, storyId, storyName));
+    button.style.backgroundImage = `url(${chrome.runtime.getURL("logo.svg")})`;
+    button.style.backgroundRepeat = "no-repeat";
+    button.style.backgroundPosition = "center";
+    button.style.backgroundSize = "14px 14px";
     return button
 }
 
@@ -68,7 +68,7 @@ function slugify(text) {
 }
 
 function shrinkCloseButtons() {
-    var close = document.querySelectorAll(".persistence.use_click_to_copy .close");
+    const close = document.querySelectorAll(".persistence.use_click_to_copy .close");
     close.forEach(function (thisCloseButton) {
         thisCloseButton.style.width = "82px";
     });
