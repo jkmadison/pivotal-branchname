@@ -2,8 +2,10 @@
 
 _Git Button_ adds a new copy button to each story in Pivotal Tracker. It copies the following code to the clipboard so that it can be pasted.
 
+{story-type}/{story-id}-{story-name}
+
 ```
-185723723-a-slugified-branch-name-from-card-title
+feature/185723723-a-slugified-branch-name-from-card-title
 ```
 
 ![Screenshot of Git Button in Pivotal](http://git-button.joeldare.com/screenshot-640x400.png)
